@@ -58,7 +58,7 @@ const BackgroundImage = 'https://static.vecteezy.com/system/resources/previews/0
                                   swap
                                 }
                             >
-                                swap
+                                Swap
                             </button>
                         </div>
                         <div className="w-full mt-1 mb-4">

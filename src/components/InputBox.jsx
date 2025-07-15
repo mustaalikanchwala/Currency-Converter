@@ -39,14 +39,18 @@ function InputBox({
             {/* Currency type */}
             <div className="w-1/2 flex flex-wrap justify-end text-right">
                 <p className="text-black/40 mb-2 w-full">Currency Type</p>
-                <select
+                <input
+                list='currency-options'
                     className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
                     value={selectCurrency}
                     onChange={(e)=> onCurrencyChange &&
                         onCurrencyChange(e.target.value)
                     }
                     disabled={currencyDisabled} // it will allow user to change currency type.
-                    >
+                    placeholder='Type or Search'
+                    />
+                        <datalist id='currency-options'>
+
                     {/* When rendering lists, React uses key to identify which items changed, were added, or removed.
 
 This improves performance and avoids unnecessary re-renders.
@@ -60,7 +64,7 @@ Without key, React may misidentify which elements to update, causing bugs or slo
                         </option>
                 
             ))}
-                </select>
+            </datalist>
             </div>
         </div>
     );
